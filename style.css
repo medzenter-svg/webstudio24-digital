@@ -79,6 +79,49 @@ h3{font-size:1.18rem;margin:0 0 10px}
 .card:hover{border-color:var(--border-gold);background:var(--surface-hover);transform:translateY(-4px)}
 .card p,.price-card p,.included p{color:var(--text-muted)}
 
+/* Portfolio */
+.section-intro{max-width:640px;font-size:1.05rem;margin:-6px 0 0}
+.portfolio-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:44px}
+.portfolio-card{border-radius:var(--radius);overflow:hidden;background:var(--surface);border:1px solid var(--border);transition:border-color .3s ease,transform .3s ease}
+.portfolio-card:hover{transform:translateY(-6px);border-color:var(--border-gold)}
+.portfolio-browser{padding:10px}
+.browser-bar{display:flex;gap:6px;padding:2px 4px 10px}
+.browser-bar span{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.18)}
+.portfolio-screen{border-radius:10px;overflow:hidden;padding:16px;display:flex;flex-direction:column;gap:10px;min-height:190px}
+.mock-nav{height:8px;width:38%;border-radius:4px;background:rgba(255,255,255,.22)}
+.mock-hero{position:relative;height:64px;border-radius:8px;overflow:hidden}
+.mock-badge{position:absolute;left:12px;bottom:12px;width:34%;height:10px;border-radius:4px;background:rgba(255,255,255,.85)}
+.mock-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;flex:1}
+.mock-item{border-radius:8px}
+.portfolio-info{padding:20px 22px 24px}
+.portfolio-info h3{font-size:1.05rem}
+.portfolio-info p{font-size:.92rem;margin:0}
+
+.theme-jewelry .portfolio-screen{background:#12100b}
+.theme-jewelry .mock-hero{background:linear-gradient(135deg,#2a2416,#171208)}
+.theme-jewelry .mock-badge{background:linear-gradient(135deg,var(--gold-light),var(--gold))}
+.theme-jewelry .mock-item{background:linear-gradient(160deg,#241f14,#0f0d08);border:1px solid rgba(201,169,97,.35)}
+
+.theme-candy .portfolio-screen{background:#231218}
+.theme-candy .mock-hero{background:linear-gradient(135deg,#e8879f,#f4b8c4)}
+.theme-candy .mock-badge{background:#fff6e9}
+.theme-candy .mock-item:nth-child(1){background:#e8879f}
+.theme-candy .mock-item:nth-child(2){background:#f6d365}
+.theme-candy .mock-item:nth-child(3){background:#8fd3c7}
+
+.theme-flowers .portfolio-screen{background:#101a13}
+.theme-flowers .mock-hero{background:linear-gradient(135deg,#6f9b76,#c9dcb4)}
+.theme-flowers .mock-badge{background:#fbfaf3}
+.theme-flowers .mock-item:nth-child(1){background:#c9dcb4}
+.theme-flowers .mock-item:nth-child(2){background:#e7b7c2}
+.theme-flowers .mock-item:nth-child(3){background:#8fae7a}
+
+.theme-sushi .portfolio-screen{background:#160b0b}
+.theme-sushi .mock-hero{background:linear-gradient(135deg,#3a1414,#160707)}
+.theme-sushi .mock-badge{background:linear-gradient(135deg,#f0d78c,#c9a961)}
+.theme-sushi .mock-item{background:linear-gradient(160deg,#241010,#160909);border:1px solid rgba(201,60,60,.35)}
+.theme-sushi .mock-item:nth-child(2){border-color:rgba(201,169,97,.35)}
+
 /* Pricing */
 .pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:40px}
 .price-card{display:flex;flex-direction:column;position:relative}
@@ -127,7 +170,7 @@ footer{border-top:1px solid var(--border);padding:32px 0;background:var(--bg)}
 @media(max-width:900px){
   .nav-links{display:none}
   .hero-grid,.shop-grid,.contact-grid{grid-template-columns:1fr}
-  .cards.three,.pricing-grid{grid-template-columns:1fr 1fr}
+  .cards.three,.pricing-grid,.portfolio-grid{grid-template-columns:1fr 1fr}
   .shop-options{grid-template-columns:repeat(3,1fr)}
   .price-card.featured{transform:none}
 }
@@ -135,7 +178,7 @@ footer{border-top:1px solid var(--border);padding:32px 0;background:var(--bg)}
   .container{width:min(100% - 26px,1180px)}
   .nav .button-small{display:none}
   .hero{padding:88px 0 56px}
-  .hero-panel,.cards.three,.pricing-grid,.check-grid,.shop-options{grid-template-columns:1fr}
+  .hero-panel,.cards.three,.pricing-grid,.check-grid,.shop-options,.portfolio-grid{grid-template-columns:1fr}
   .section{padding:72px 0}
   .footer-row{flex-direction:column}
   .result-box div{flex-direction:column;gap:0}

@@ -38,7 +38,7 @@ packages.forEach(([count,price])=>{
   options.appendChild(button);
 });
 
-const revealTargets=document.querySelectorAll('.card,.price-card,.hero-panel,.included,.calculator,.contact-form,.shop-option');
+const revealTargets=document.querySelectorAll('.card,.price-card,.portfolio-card,.hero-panel,.included,.calculator,.contact-form,.shop-option');
 revealTargets.forEach(el=>el.classList.add('reveal'));
 if('IntersectionObserver' in window){
   const revealObserver=new IntersectionObserver(entries=>{
