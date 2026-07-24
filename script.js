@@ -1,3 +1,10 @@
+const header=document.querySelector('.site-header');
+if(header){
+  const toggleHeader=()=>header.classList.toggle('scrolled',window.scrollY>12);
+  toggleHeader();
+  window.addEventListener('scroll',toggleHeader,{passive:true});
+}
+
 const productCount=document.getElementById('productCount');
 const selectedProducts=document.getElementById('selectedProducts');
 const shopTotal=document.getElementById('shopTotal');
@@ -30,6 +37,22 @@ packages.forEach(([count,price])=>{
   });
   options.appendChild(button);
 });
+
+const revealTargets=document.querySelectorAll('.card,.price-card,.hero-panel,.included,.calculator,.contact-form,.shop-option');
+revealTargets.forEach(el=>el.classList.add('reveal'));
+if('IntersectionObserver' in window){
+  const revealObserver=new IntersectionObserver(entries=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){
+        entry.target.classList.add('is-visible');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  },{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+  revealTargets.forEach(el=>revealObserver.observe(el));
+}else{
+  revealTargets.forEach(el=>el.classList.add('is-visible'));
+}
 
 document.querySelectorAll('.package-choice').forEach(button=>{
   button.addEventListener('click',()=>{
