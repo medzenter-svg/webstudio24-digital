@@ -67,12 +67,23 @@ document.getElementById('chooseShop').addEventListener('click',()=>{
 
 document.getElementById('contactForm').addEventListener('submit',event=>{
   event.preventDefault();
-  const name=document.getElementById('name').value.trim();
-  const email=document.getElementById('email').value.trim();
-  const pkg=document.getElementById('contactPackage').value.trim();
-  const message=document.getElementById('message').value.trim();
-  const subject=encodeURIComponent(`Projektanfrage von ${name}`);
-  const body=encodeURIComponent(`Name: ${name}\nE-Mail: ${email}\nPaket: ${pkg}\n\nProjektbeschreibung:\n${message}`);
-  document.getElementById('formStatus').textContent='Ihr E-Mail-Programm wird geöffnet. Ersetzen Sie später die Empfängeradresse in script.js.';
-  window.location.href=`mailto:info@webstudio24.digital?subject=${subject}&body=${body}`;
+  const form=event.target;
+  const status=document.getElementById('formStatus');
+  const submitButton=form.querySelector('button[type="submit"]');
+  submitButton.disabled=true;
+  status.textContent='Anfrage wird gesendet …';
+  fetch('/',{
+    method:'POST',
+    headers:{'Content-Type':'application/x-www-form-urlencoded'},
+    body:new URLSearchParams(new FormData(form)).toString()
+  }).then(response=>{
+    if(!response.ok) throw new Error('Netzwerkfehler');
+    status.textContent='Vielen Dank! Ihre Anfrage wurde erfolgreich gesendet. Wir melden uns zeitnah bei Ihnen.';
+    form.reset();
+    document.getElementById('contactPackage').value='Business – 1.490 €';
+  }).catch(()=>{
+    status.textContent='Die Anfrage konnte nicht gesendet werden. Bitte schreiben Sie uns direkt an info@webstudio24.digital.';
+  }).finally(()=>{
+    submitButton.disabled=false;
+  });
 });

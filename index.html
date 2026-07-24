@@ -284,12 +284,14 @@
           <h2>Unverbindliches Angebot anfordern</h2>
           <p>Beschreiben Sie kurz Ihr Projekt. Sie erhalten anschließend ein transparentes Angebot. Eine kostenlose Beratung im Vorfeld ist jederzeit möglich.</p>
         </div>
-        <form id="contactForm" class="contact-form">
-          <label>Name<input id="name" type="text" required></label>
-          <label>E-Mail<input id="email" type="email" required></label>
-          <label>Gewünschtes Paket<input id="contactPackage" type="text" value="Business – 1.490 €"></label>
-          <label>Projektbeschreibung<textarea id="message" rows="5" required></textarea></label>
-          <button class="button full" type="submit">Anfrage vorbereiten</button>
+        <form id="contactForm" class="contact-form" name="anfrage" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+          <input type="hidden" name="form-name" value="anfrage">
+          <p class="hp-field"><label>Nicht ausfüllen<input name="bot-field"></label></p>
+          <label>Name<input id="name" name="name" type="text" required></label>
+          <label>E-Mail<input id="email" name="email" type="email" required></label>
+          <label>Gewünschtes Paket<input id="contactPackage" name="paket" type="text" value="Business – 1.490 €"></label>
+          <label>Projektbeschreibung<textarea id="message" name="nachricht" rows="5" required></textarea></label>
+          <button class="button full" type="submit">Anfrage senden</button>
           <p id="formStatus" class="fineprint" aria-live="polite"></p>
         </form>
       </div>

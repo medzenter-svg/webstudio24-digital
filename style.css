@@ -157,6 +157,8 @@ h3{font-size:1.18rem;margin:0 0 10px}
 .shop-option strong{font-family:var(--serif);color:var(--text);font-size:1.05rem}
 .shop-option span{color:var(--gold-light);margin-top:4px}
 
+.hp-field{display:none}
+
 /* Contact */
 .contact-grid{align-items:start}
 .contact-form{display:grid;gap:18px}
