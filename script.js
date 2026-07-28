@@ -72,17 +72,21 @@ document.getElementById('contactForm').addEventListener('submit',event=>{
   const submitButton=form.querySelector('button[type="submit"]');
   submitButton.disabled=true;
   status.textContent='Anfrage wird gesendet …';
-  fetch('/',{
+  const payload={};
+  new FormData(form).forEach((value,key)=>{payload[key]=value;});
+  fetch('https://formsubmit.co/ajax/info@webstudio24.digital',{
     method:'POST',
-    headers:{'Content-Type':'application/x-www-form-urlencoded'},
-    body:new URLSearchParams(new FormData(form)).toString()
+    headers:{'Content-Type':'application/json',Accept:'application/json'},
+    body:JSON.stringify(payload)
   }).then(response=>{
     if(!response.ok) throw new Error('Netzwerkfehler');
+    return response.json();
+  }).then(()=>{
     status.textContent='Vielen Dank! Ihre Anfrage wurde erfolgreich gesendet. Wir melden uns zeitnah bei Ihnen.';
     form.reset();
     document.getElementById('contactPackage').value='Business – 1.490 €';
   }).catch(()=>{
-    status.textContent='Die Anfrage konnte nicht gesendet werden. Bitte schreiben Sie uns direkt an info@webstudio24.digital.';
+    status.textContent='Die Anfrage konnte nicht automatisch gesendet werden. Bitte schreiben Sie uns direkt an info@webstudio24.digital oder per WhatsApp (+49 173 6722727).';
   }).finally(()=>{
     submitButton.disabled=false;
   });

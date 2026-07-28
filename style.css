@@ -35,6 +35,10 @@ h1,h2,h3{font-family:var(--serif);color:var(--text);font-weight:600}
 .topbar a{color:#fff;font-weight:700}
 .topbar a:hover{color:var(--gold-pale)}
 .icon-phone{width:14px;height:14px;vertical-align:-2px;margin-right:6px}
+.topbar-contacts{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.topbar-whatsapp{display:inline-flex;align-items:center;gap:6px;color:#25D366!important;font-weight:700}
+.topbar-whatsapp:hover{color:#4be08a!important}
+.topbar-whatsapp svg{width:15px;height:15px}
 
 /* Header */
 .site-header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.75);backdrop-filter:blur(18px);border-bottom:1px solid var(--border);transition:background .3s ease,border-color .3s ease}
@@ -194,6 +198,9 @@ h3{font-size:1.18rem;margin:0 0 10px}
 .contact-phone .icon-phone{margin-right:0}
 .contact-phone a{color:var(--gold-deep);font-weight:700}
 .contact-phone a:hover{color:var(--gold-dim)}
+.whatsapp-link{display:inline-flex;align-items:center;gap:8px;color:#128C4A!important}
+.whatsapp-link:hover{color:#0da355!important}
+.whatsapp-link svg{width:18px;height:18px}
 
 /* Footer */
 .site-footer{background:#141218;color:rgba(255,255,255,.66);padding:68px 0 0}
