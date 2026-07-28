@@ -54,10 +54,10 @@ h1,h2,h3{font-family:var(--serif);color:var(--text);font-weight:600}
 .site-header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.75);backdrop-filter:blur(18px);border-bottom:1px solid var(--border);transition:background .3s ease,border-color .3s ease}
 .site-header.scrolled{background:rgba(255,255,255,.96);border-bottom-color:var(--border-gold)}
 .nav{display:flex;align-items:center;justify-content:space-between;min-height:78px;gap:24px}
-.brand{font-family:var(--serif);font-size:1.4rem;font-weight:700;color:var(--text);letter-spacing:.01em}
-.brand span{color:var(--gold-deep);font-style:italic}
-.nav-links{display:flex;gap:32px;color:var(--text-muted);font-size:.86rem;text-transform:uppercase;letter-spacing:.09em;font-weight:600}
-.nav-links a{position:relative;padding:4px 0}
+.brand{font-family:var(--serif);font-size:1.65rem;font-weight:700;color:var(--text);letter-spacing:.01em}
+.brand span{color:var(--text);font-style:italic}
+.nav-links{display:flex;align-items:center;gap:28px;color:var(--text-muted);font-size:.86rem;text-transform:uppercase;letter-spacing:.09em;font-weight:600}
+.nav-links a{position:relative;padding:4px 0;white-space:nowrap}
 .nav-links a::after{content:'';position:absolute;left:0;right:100%;bottom:-2px;height:1px;background:var(--gold-deep);transition:right .3s ease}
 .nav-links a:hover{color:var(--gold-deep)}
 .nav-links a:hover::after{right:0}
