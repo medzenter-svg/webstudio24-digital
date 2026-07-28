@@ -141,6 +141,7 @@ h3{font-size:1.18rem;margin:0 0 10px}
 
 /* Pricing */
 .pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:40px}
+.pricing-grid.four{grid-template-columns:repeat(4,1fr)}
 .price-card{display:flex;flex-direction:column;position:relative}
 .price-card:hover{transform:translateY(-4px);border-color:var(--border-gold)}
 .price-card.featured{border:1px solid var(--gold);background:linear-gradient(180deg,rgba(201,169,97,.1),rgba(255,255,255,0));box-shadow:0 26px 54px -30px rgba(143,106,44,.35),var(--shadow-soft)}
@@ -189,7 +190,7 @@ footer{border-top:1px solid var(--border);padding:32px 0;background:var(--bg)}
 @media(max-width:900px){
   .nav-links{display:none}
   .hero-grid,.shop-grid,.contact-grid{grid-template-columns:1fr}
-  .cards.three,.pricing-grid{grid-template-columns:1fr 1fr}
+  .cards.three,.pricing-grid,.pricing-grid.four{grid-template-columns:1fr 1fr}
   .portfolio-grid{grid-template-columns:1fr 1fr}
   .shop-options{grid-template-columns:repeat(3,1fr)}
   .price-card.featured{transform:none}
@@ -198,7 +199,7 @@ footer{border-top:1px solid var(--border);padding:32px 0;background:var(--bg)}
   .container{width:min(100% - 26px,1180px)}
   .nav .button-small{display:none}
   .hero{padding:88px 0 56px}
-  .hero-panel,.cards.three,.pricing-grid,.check-grid,.shop-options,.portfolio-grid{grid-template-columns:1fr}
+  .hero-panel,.cards.three,.pricing-grid,.pricing-grid.four,.check-grid,.shop-options,.portfolio-grid{grid-template-columns:1fr}
   .section{padding:72px 0}
   .footer-row{flex-direction:column}
   .result-box div{flex-direction:column;gap:0}
