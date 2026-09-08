@@ -50,8 +50,13 @@ footer{padding:80px 0 30px;background:#070708;color:#aaa;border-top:1px solid rg
   .hero-actions{align-items:center}
   .hero-proof{text-align:left}
   .projects{grid-template-columns:1fr}
-  .projects .project:last-child{grid-column:auto;width:100%}
+.projects .project:last-child{grid-column:auto;width:100%}
 }
+
+.top-phone{font-weight:700;letter-spacing:.1em}
+.contact-details{display:flex;flex-direction:column;align-items:flex-start;gap:10px;margin-top:30px}
+.contact-details a{color:var(--gold-light);border-bottom:1px solid rgba(201,165,106,.55)}
+.contact-details address{color:#b8b8ba;font-style:normal}
 
 /* Compact, symmetrical portfolio previews */
 .projects{max-width:1080px;margin:0 auto;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
@@ -65,3 +70,19 @@ footer{padding:80px 0 30px;background:#070708;color:#aaa;border-top:1px solid rg
 .project-meta p{font-size:.62rem}
 @media(max-width:1000px){.projects{grid-template-columns:1fr 1fr;max-width:760px}.projects .project:last-child{grid-column:1/-1;width:calc(50% - 11px)}}
 @media(max-width:760px){.projects{grid-template-columns:1fr;max-width:480px}.projects .project:last-child{grid-column:auto;width:100%}}
+
+/* Legal pages */
+.legal-page{background:var(--paper)}
+.legal-header{position:relative;background:var(--black);color:#fff;border-bottom:1px solid rgba(255,255,255,.12)}
+.legal-header .nav{justify-content:space-between}
+.legal-main{padding:100px 0 130px}
+.legal-container{max-width:850px}
+.legal-main h1{margin-bottom:58px;font-family:var(--serif);font-size:clamp(3.2rem,7vw,5.8rem)}
+.legal-card{padding:34px 0;border-top:1px solid var(--line)}
+.legal-card:last-child{border-bottom:1px solid var(--line)}
+.legal-card h2{margin-bottom:18px;font-family:var(--serif);font-size:clamp(1.45rem,3vw,2rem);letter-spacing:-.02em}
+.legal-card p,.legal-card address{margin:0;color:#55545a;font-style:normal}
+.legal-card p+address{margin-top:18px}
+.legal-card a{color:#735a36;border-bottom:1px solid rgba(115,90,54,.35)}
+.legal-page footer{padding-top:30px}
+@media(max-width:760px){.legal-header .button{min-height:42px;padding-inline:14px;gap:10px}.legal-main{padding:72px 0 90px}.legal-main h1{margin-bottom:42px}.legal-card{padding:28px 0}}
