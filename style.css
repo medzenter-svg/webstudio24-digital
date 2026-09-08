@@ -19,3 +19,36 @@ footer{padding:80px 0 30px;background:#070708;color:#aaa;border-top:1px solid rg
 @media(max-width:1000px){.nav-links{gap:18px}.hero-grid{grid-template-columns:1fr;padding-bottom:80px}.hero-copy{padding-bottom:28px}.hero-showcase{width:88%;margin-left:auto}.statement-grid,.section-head,.process-grid,.shop-grid,.contact-grid{grid-template-columns:1fr;gap:50px}.section-head{align-items:start}.section-head>p{max-width:650px}.process-intro{position:static}.pricing-grid{grid-template-columns:1fr 1fr}.price-card:last-child{grid-column:1/-1}.footer-main{grid-template-columns:1fr 1fr}.footer-main p{display:none}}
 @media(max-width:760px){.container{width:min(100% - 28px,1240px)}.topline-inner span{display:none}.topline-inner{justify-content:center}.nav{height:72px}.nav-toggle{display:block;margin-left:auto}.nav-cta{display:none}.nav-links{position:fixed;inset:106px 0 0;display:flex;flex-direction:column;align-items:flex-start;padding:46px 24px;background:#0b0b0c;transform:translateX(100%);transition:.3s}.nav-links.open{transform:none}.nav-links a{font-family:var(--serif);font-size:2rem}.hero{padding-top:132px}.hero-grid{gap:24px}.hero-copy{padding-bottom:25px}.hero h1{font-size:clamp(2.7rem,13vw,4.5rem)}.hero-lead{font-size:1rem}.hero-actions{align-items:flex-start;flex-direction:column}.hero-proof{grid-template-columns:1fr;gap:12px;margin-top:42px}.hero-showcase{width:100%;padding:0 0 38px}.showcase-frame{transform:none}.floating-note{left:14px;bottom:8px}.vertical-label{display:none}.hero-marquee{overflow:hidden;justify-content:flex-start;white-space:nowrap}.section,.statement{padding:82px 0}h2{font-size:clamp(2.25rem,11vw,3.6rem)}.statement-grid{gap:28px}.section-head{margin-bottom:45px}.service-row{grid-template-columns:38px 1fr 22px;gap:12px;padding:25px 0}.service-row p{grid-column:2/-1}.projects{grid-template-columns:1fr;gap:50px}.project-wide{grid-column:auto}.project-wide .project-image img,.project-image img{aspect-ratio:4/3}.project-meta{display:block}.project-meta p{margin-top:8px}.pricing-grid{grid-template-columns:1fr}.price-card:last-child{grid-column:auto}.price-card{min-height:auto}.price-card h3{margin-top:45px}.shop-grid,.contact-grid{gap:50px}.calculator,.contact-form{padding:24px}.check-grid,.field-row{grid-template-columns:1fr}.footer-main{grid-template-columns:1fr}.footer-mail{justify-self:start}.footer-bottom{flex-direction:column;gap:18px}.footer-bottom span:last-child{flex-wrap:wrap;gap:16px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}.project-image img,.site-header{transition:none}}
+
+/* Balanced agency presentation */
+.hero{min-height:auto;padding:190px 0 0}
+.hero-glow{left:50%;transform:translateX(-50%)}
+.hero-grid{display:block}
+.hero-copy{max-width:940px;margin:0 auto;padding:50px 0 82px;text-align:center}
+.hero h1{max-width:900px;margin:0 auto 30px;font-size:clamp(3.25rem,5.2vw,5.35rem);line-height:1.02}
+.hero-lead{max-width:700px;margin:0 auto;color:#b9b9ba;font-size:1.08rem}
+.hero-actions{justify-content:center}
+.hero-proof{max-width:830px;margin:58px auto 0;text-align:left}
+.hero-showcase,.showcase-frame,.floating-note,.vertical-label{display:none}
+.projects{grid-template-columns:repeat(3,minmax(0,1fr));gap:26px}
+.project-wide{grid-column:auto}
+.project-image img,.project-wide .project-image img{aspect-ratio:4/3;object-fit:cover;object-position:top}
+.project-meta{display:block}
+.project-meta p{margin-top:8px}
+
+@media(max-width:1000px){
+  .hero-grid{display:block;padding-bottom:0}
+  .hero-copy{max-width:780px;padding:40px 0 72px}
+  .hero h1{max-width:760px}
+  .projects{grid-template-columns:1fr 1fr}
+  .projects .project:last-child{grid-column:1/-1;width:calc(50% - 13px);justify-self:center}
+}
+@media(max-width:760px){
+  .hero{padding-top:132px}
+  .hero-copy{padding:42px 0 58px}
+  .hero h1{font-size:clamp(2.75rem,13vw,4.25rem)}
+  .hero-actions{align-items:center}
+  .hero-proof{text-align:left}
+  .projects{grid-template-columns:1fr}
+  .projects .project:last-child{grid-column:auto;width:100%}
+}
