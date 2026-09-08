@@ -52,3 +52,16 @@ footer{padding:80px 0 30px;background:#070708;color:#aaa;border-top:1px solid rg
   .projects{grid-template-columns:1fr}
   .projects .project:last-child{grid-column:auto;width:100%}
 }
+
+/* Compact, symmetrical portfolio previews */
+.projects{max-width:1080px;margin:0 auto;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+.project{min-width:0}
+.project-image{position:relative;padding:28px 9px 9px;background:#202023;border:1px solid rgba(255,255,255,.13);box-shadow:0 18px 45px rgba(0,0,0,.22)}
+.project-image:before{content:"";position:absolute;top:11px;left:12px;width:6px;height:6px;border-radius:50%;background:#706f73;box-shadow:12px 0 #706f73,24px 0 #706f73}
+.project-image img,.project-wide .project-image img{width:100%;height:auto;aspect-ratio:16/9;object-fit:contain;object-position:center;background:#fff}
+.project:hover img{transform:none}
+.project-meta{padding:16px 2px 0}
+.project-meta h3{font-size:1.25rem}
+.project-meta p{font-size:.62rem}
+@media(max-width:1000px){.projects{grid-template-columns:1fr 1fr;max-width:760px}.projects .project:last-child{grid-column:1/-1;width:calc(50% - 11px)}}
+@media(max-width:760px){.projects{grid-template-columns:1fr;max-width:480px}.projects .project:last-child{grid-column:auto;width:100%}}
