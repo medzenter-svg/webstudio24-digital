@@ -68,7 +68,7 @@ footer{padding:80px 0 30px;background:#070708;color:#aaa;border-top:1px solid rg
 .project-meta{padding:16px 2px 0}
 .project-meta h3{font-size:1.25rem}
 .project-meta p{font-size:.62rem}
-@media(max-width:1000px){.projects{grid-template-columns:1fr 1fr;max-width:760px}.projects .project:last-child{grid-column:1/-1;width:calc(50% - 11px)}}
+@media(max-width:1000px){.projects{grid-template-columns:1fr 1fr;max-width:760px}.projects .project:last-child{grid-column:auto;width:100%}}
 @media(max-width:760px){.projects{grid-template-columns:1fr;max-width:480px}.projects .project:last-child{grid-column:auto;width:100%}}
 
 /* Legal pages */
