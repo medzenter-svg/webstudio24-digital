@@ -100,3 +100,21 @@ footer{padding:80px 0 30px;background:#070708;color:#aaa;border-top:1px solid rg
 
 @media(max-width:1000px){.nav{gap:24px}.nav-phone{font-size:.9rem}}
 @media(max-width:760px){.topline{display:none}.site-header{top:0}.nav-phone{display:none}.nav-links{inset:72px 0 0}}
+
+/* Tighter vertical rhythm */
+.section{padding:90px 0}
+.statement{padding:88px 0}
+.section-head{margin-bottom:52px}
+.hero-copy{padding-bottom:62px}
+.hero-proof{margin-top:44px}
+.projects{row-gap:48px}
+.price-card{min-height:540px}
+footer{padding-top:58px}
+
+@media(max-width:760px){
+  .section,.statement{padding:68px 0}
+  .section-head{margin-bottom:36px}
+  .hero-copy{padding-bottom:48px}
+  .hero-proof{margin-top:34px}
+  .projects{row-gap:42px}
+}
